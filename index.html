@@ -16,11 +16,11 @@
 			$('#menu ul li').hover(function(){
 				$(this).find('span').stop().animate({
 					marginTop:"-40px"
-				},400);
+				},300);
 			},function(){
 				$(this).find('span').stop().animate({
 					marginTop:"0px"
-				},300);
+				},2000);
 			});
 	});
 	</script>
@@ -28,11 +28,20 @@
 	<style>
 		body{background:black;
 			}
-		#menu{width:700px;
-			margin:auto;
+		body::after{
+ 			content:"";
+ 			background-image:url("bgGrid.jpg");
+ 		 	opacity: 6;
+ 	  		margin: 0;
+  			position: absolute;
+   			z-index: -1;
+ 		}
+ 		#menu{
+ 			width: 700px;
+ 			margin: 0 auto;
            	}
 		#menu ul{list-style:none;
-			font-size:18px;
+			font-size:1em;
 			font-family:"Hobo Std";
 			margin:0px;
 			padding:0px;
@@ -44,7 +53,7 @@
 		#menu ul li a, #menu ul li span{width:100px;
 			padding:10px 20px;
 			height:18px;
-			color:#FFFFFF;
+			color:#003355;
 			background:url("Degrade_img.jpg") repeat-x; 
             background:red;
 			text-decoration:none;
